@@ -1,0 +1,23 @@
+{
+  "name": "product-video-specs",
+  "version": "1.0.0",
+  "description": "Upload limits for product videos on Shopify, YouTube Shorts, TikTok ads, Instagram Reels ads and Amazon, with a tiny checker. Zero dependencies.",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": { "types": "./src/index.d.ts", "default": "./src/index.js" },
+    "./specs.json": "./data/specs.json"
+  },
+  "files": ["src", "data"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test",
+    "build:json": "node scripts/build-json.js",
+    "check": "node examples/check.js"
+  },
+  "keywords": ["video", "shopify", "tiktok", "instagram-reels", "youtube-shorts", "amazon", "ffprobe", "ecommerce"],
+  "author": "Jack Ships",
+  "license": "MIT"
+}
